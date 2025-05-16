@@ -1,0 +1,181 @@
+.cd__main {
+  position: relative;
+  min-height: 100vh;
+  background-color: #544f4a !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+#name {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.square {
+  color: #605B56;
+  border: 2px solid #605B56;
+  font-size: 3rem;
+  width: 33.3333%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+.square:last-child {
+  border-right: 0;
+}
+
+.row:first-child .square {
+  border-top: 0;
+}
+
+.x-marker {
+  color: #eeda76;
+}
+
+.o-marker {
+  color: #39abd9;
+}
+
+/* Modal container */
+.modal-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  display: none;
+}
+
+/* Modal box */
+.modal {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: hsla(30, 12%, 23%, 0.95);
+  color: white;
+  font-size: 1rem;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.end-game-modal {
+  display: none;
+}
+
+.choose-modal span {
+  display: inline-block;
+  line-height: 2rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.end-game-modal span {
+  color: #eeda76;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+}
+
+/* Buttons */
+.button-area span {
+  display: inline-block;
+  background-color: hsla(30, 10%, 20%, 0.95);
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+.button-area span:hover {
+  cursor: pointer;
+  background-color: hsla(30, 10%, 30%, 0.95);
+}
+
+/* Responsive Scaling */
+@media screen and (min-width: 768px) {
+  #name {
+    font-size: 2.5rem;
+  }
+
+  .square {
+    font-size: 4rem;
+  }
+
+  .end-game-modal span {
+    font-size: 2rem;
+  }
+
+  .choose-modal span {
+    font-size: 3rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .modal {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .board {
+    max-width: 600px;
+  }
+
+  .square {
+    font-size: 5rem;
+  }
+
+  #name {
+    font-size: 3rem;
+  }
+}
